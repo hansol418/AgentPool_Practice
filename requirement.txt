@@ -1,22 +1,37 @@
 # ================================
-# Core (LLM / Agent Runtime)
+# Python
+# Recommended: Python 3.11.x
 # ================================
-torch>=2.1.0
+
+# ================================
+# Core (LLM / Runtime)
+# ================================
+torch==2.3.1
 transformers==4.42.0
 accelerate==0.31.0
-safetensors>=0.4.2
+safetensors==0.4.5
 
 # ================================
 # Embedding / Similarity
 # ================================
-sentence-transformers>=2.2.2
-numpy>=1.24.0
+sentence-transformers==3.0.1
+numpy==1.26.4
 
 # ================================
-# LangChain / LangGraph
+# LangChain / LangGraph / RAG
 # ================================
-langchain>=0.1.0
-langgraph>=0.2.17
+langchain==0.3.21
+langchain-community==0.3.20
+langchain-text-splitters==0.3.7
+langgraph==0.2.67
+
+# ================================
+# Vector DB / Document Loaders
+# ================================
+chromadb==1.0.20
+pypdf==5.9.0
+python-docx==1.1.2
+unstructured==0.18.15
 
 # ================================
 # LoRA / PEFT / SFT
@@ -31,17 +46,24 @@ datasets==2.20.0
 bitsandbytes==0.45.5
 
 # ================================
+# API / Server
+# ================================
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+
+# ================================
 # Tools / External API
 # ================================
-requests>=2.31.0
+requests==2.32.3
 
 # ================================
 # UI
 # ================================
-gradio>=4.0.0
+gradio==4.44.1
 
 # ================================
-# Utility / Tokenizer
+# Utility / Tokenizer / Validation
 # ================================
-pydantic>=2.0.0
-sentencepiece>=0.1.99
+pydantic==2.10.6
+sentencepiece==0.2.0

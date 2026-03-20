@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import random
+from config.paths import REACT_DATA_JSONL
 
 # 1) 공통 프롬프트 템플릿 (agent_llm_node 프롬프트 축약 버전)
 BASE_PROMPT_TEMPLATE = """당신은 도구를 사용할 수 있는 한국어 지능형 에이전트입니다.
@@ -299,7 +300,7 @@ def save_jsonl(samples, path: Path):
 
 
 if __name__ == "__main__":
-    out_path = Path("react_sft_data.jsonl")
+    out_path =  REACT_DATA_JSONL
     data = build_dataset()
     save_jsonl(data, out_path)
     print(f"✅ {len(data)}개 샘플을 {out_path} 에 저장했습니다.")

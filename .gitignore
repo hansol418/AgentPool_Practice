@@ -1,3 +1,11 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cache
 # 디폴트 무시된 파일
 /shelf/
 /workspace.xml
@@ -5,3 +13,11 @@
 /httpRequests/
 # 서퍼 API 키
 .env
+# 가상환경
+.venv/
+# 모델
+models/
+*.safetensors
+vector DB
+cache
+uploads
